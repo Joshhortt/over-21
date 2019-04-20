@@ -16,11 +16,33 @@ If age is 16, age >= 21 becomes 16 >= 21, which evaluates to false. In this case
 the code in the curly braces is skipped and nothing is displayed.
 
 ****This is the code below****
+
+$(document).ready(function() {
+  var age = parseInt(prompt("How old are you?"));
+
+  if (age >= 21) {
+    $('#drinks').show();
+  }
+});
+*/
+
+
+/*****TWO BRANCHES****
+let's show a different message if the condition is false (the user is under 21). To do this we'll add an else branch:
+Here, just like before, when the condition in parentheses evaluates to true, the code in the first set of curly braces is run.
+But when the condition evaluates to false, the code in the second set of curly braces, after the else keyword, is run.
+An else statement does not need a condition because the code in its curly braces is what will be run when the if condition is false.
+Generally, your code is executed from top to bottom, like a car driving straight down the road.
+If the condition is true, the if code runs, otherwise the else code runs.
+
+****This is the code below****
 */
 $(document).ready(function() {
   var age = parseInt(prompt("How old are you?"));
 
   if (age >= 21) {
     $('#drinks').show();
+  } else {
+    $('#under-21').show();
   }
 });
